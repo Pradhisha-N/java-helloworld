@@ -17,7 +17,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
-                    sh 'docker push pradhisha/java-helloworld:latest'
+                    sh 'docker push $IMAGE_NAME'
                 }
             }
         }
