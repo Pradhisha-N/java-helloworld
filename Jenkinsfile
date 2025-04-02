@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git (url:'https://github.com/pradhisha/java-helloworld.git',branch:'main')
+                git url:'https://github.com/Pradhisha-N/java-helloworld.git',branch:'main'
             }
         }
         stage('Build Docker Image') {
